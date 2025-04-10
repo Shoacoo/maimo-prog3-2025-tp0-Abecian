@@ -160,7 +160,9 @@ header.logo_container img {
 }
 
 .hero {
-    padding-top: 75px;
+    position: relative;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
    
@@ -176,19 +178,32 @@ header.logo_container img {
   padding-bottom: 75px;
 }
 
-#hero_title{
-  color:#D6444A;
 
+
+
+#hero_title{
+  color:#ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  opacity: 90%;
+  z-index: 2;
+  text-align: center;
 }
 
 .hero_img{
-  width: 625px;
-  
+  opacity: 55%;
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: blur(1.5px);
 }
   
 .recetas_boxed{
 
-  padding-top: 60px;
+  padding-top: 3%;
 }
 
 .separator {
@@ -238,7 +253,7 @@ header.logo_container img {
 }
 
 footer {
-  background-color: #222; 
+  background-color: #252525; 
   color: white; 
   text-align: center;
   padding: 20px 0;
@@ -313,11 +328,210 @@ footer {
   opacity: 0.8;
 }
 
-.single_content {
+.content {
 
+  padding-left: 5%;
+  
 }
 
 .single_content ul{
   display: flex;
   justify-content:left;
+}
+
+.btn_back {
+  padding-left: 3%;
+  position: absolute;
+  color: #ffffff;
+  list-style: none;
+  font-family: "Lexend", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.recipe_tittle {
+     padding-top: 100px;
+    color: #ffe7d1;
+    font-family: "Reggae One", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5em;
+    line-height: 45px
+}
+
+#recipe_separator{
+  border: none;
+  height: 2px;
+  background-color: #ffe7d1;
+  margin-right: 50%;
+}
+
+.recipe_img{
+  width: 30%; 
+  height: auto;
+  border-radius: 3px;
+}
+
+.recipe_conteiner {
+
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; 
+  padding-top: 1.5%;
+  padding-bottom: 4%;
+}
+
+.ingredients {
+  
+  padding: 0;
+  margin: 0;
+  color: #ffe7d1;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.5em;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ingredient {
+  
+  margin-bottom: 0.5rem;
+
+}
+
+.intructions {
+  color: #ffe7d1;
+  font-family: "Reggae One", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 45px;
+  text-align: center;
+}
+
+.intructions_p{
+  text-align: center;
+  width: 65%;
+  color: #ffe7d1;
+  font-family: "Lexend", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  padding-bottom: 4%;
+  margin: 0 auto;
+}
+
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  #logo {
+    width: 90px;
+    height: auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #hero_title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .hero_img {
+    filter: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .recetas_grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 20px;
+  }
+
+  .receta {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .separator {
+    margin: 20px 40px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-links {
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .recipe_conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ingredients {
+    padding: 10px;
+  }
+
+  .recipe_tittle {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .intructions_p {
+    padding: 10px;
+    text-align: justify;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .btn_back {
+    display: block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 15px;
+  }
 }
